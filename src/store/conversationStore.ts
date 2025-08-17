@@ -27,7 +27,8 @@ interface ConversationStore {
   updateSettings: (settings: Partial<ConversationStore['settings']>) => void
 }
 
-export const useConversationStore = create<ConversationStore>()(n  persist(
+export const useConversationStore = create<ConversationStore>()(
+  persist(
     (set, get) => ({
       currentConversation: null,
       setCurrentConversation: (conversation) => 
